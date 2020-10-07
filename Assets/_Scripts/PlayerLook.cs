@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerLook : MonoBehaviour
 {
 
-    [SerializeField] private float mouseSensitivity;
+    [SerializeField] private float mouseSensitivity = 300.0f;
     [SerializeField] private Transform playerBody;
 
     private float xAxisClamp;
@@ -23,7 +23,7 @@ public class PlayerLook : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         CameraRotation();
     }
@@ -46,6 +46,15 @@ public class PlayerLook : MonoBehaviour
             mouseY = 0.0f;
         }
         transform.Rotate(Vector3.left * mouseY);
-        transform.Rotate(Vector3.up * mouseX);
+        playerBody.Rotate(Vector3.up * mouseX);
     }
+
+    /* 
+    private void ClampXAxisRotationToValue(float value)
+    {
+        Vector3 eulerRotation = transform.eulerAngles;
+        eulerRotation.x = value;
+        transform.eulerAngles = eulerRotation;
+    }
+    */
 }

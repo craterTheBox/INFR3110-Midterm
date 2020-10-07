@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using FMOD;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public class PlayerMove : MonoBehaviour
     private float slopeForce = 6.0f;
     private float slopeForceRayLength = 1.5f;
     [SerializeField] private AnimationCurve jumpFalloff;
+    [SerializeField] private float jumpMultiplier = 10.0f;
 
     private CharacterController charController;
     bool isJumping;
@@ -51,7 +53,7 @@ public class PlayerMove : MonoBehaviour
             movementSpeed = Mathf.Lerp(movementSpeed, baseSpeed, Time.deltaTime * runBuildUpSpeed);
         }
 
-        Debug.Log("Movement stuff: " + vertInput + ", " + horiInput);
+        //UnityEngine.Debug.Log("Movement stuff: " + vertInput + ", " + horiInput);
 
         Vector3 forwardMovement = transform.forward * vertInput;
         Vector3 rightMovement = transform.right * horiInput;
@@ -62,6 +64,8 @@ public class PlayerMove : MonoBehaviour
         {
             charController.Move(Vector3.down * charController.height / 2 * slopeForce * Time.deltaTime);
         }
+
+        JumpInput();
     }
 
     bool OnSlope()
@@ -77,5 +81,31 @@ public class PlayerMove : MonoBehaviour
         }
 
         return false;
+    }
+
+    void JumpInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        {
+            isJumping = true;
+            StartCoroutine(JumpEvent());
+        }
+    }
+
+    IEnumerator JumpEvent()
+    {
+        charController.slopeLimit = 90.0f;
+        float timeInAir = 0.0f;
+        do
+        {
+            float jumpForce = jumpFalloff.Evaluate(timeInAir);
+            charController.Move(Vector3.up * jumpForce * jumpMultiplier * Time.deltaTime);
+            timeInAir += Time.deltaTime;
+            yield return null;
+        } while (!charController.isGrounded && charController.collisionFlags != CollisionFlags.Above);
+
+        charController.slopeLimit = 45.0f;
+        isJumping = false;
+
     }
 }
