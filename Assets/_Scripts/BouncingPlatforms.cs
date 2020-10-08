@@ -12,8 +12,7 @@ public class BouncingPlatforms : MonoBehaviour
 
     bool reversed = false;
     float startTime;
-    float dist, distA, distC; //just needed for Lerp to work properly
-
+    float dist, distA; //just needed for Lerp to work properly
 
     void Start()
     {
