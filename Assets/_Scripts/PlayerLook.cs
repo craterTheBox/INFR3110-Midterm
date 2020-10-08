@@ -6,13 +6,14 @@ public class PlayerLook : MonoBehaviour
 {
 
     [SerializeField] private float mouseSensitivity = 300.0f;
-    [SerializeField] private Transform playerBody;
+    private Transform playerBody;
 
     private float xAxisClamp;
 
 
     void Awake()
     {
+        playerBody = GameObject.FindWithTag("Player").transform;
         LockCursor();
         xAxisClamp = 0.0f;
     }
