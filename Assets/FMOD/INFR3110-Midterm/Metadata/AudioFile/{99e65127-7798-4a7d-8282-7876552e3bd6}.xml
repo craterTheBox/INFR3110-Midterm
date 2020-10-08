@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{99e65127-7798-4a7d-8282-7876552e3bd6}">
+		<property name="assetPath">
+			<value>UI_Click_Aftertap_mono.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.087120181405895697</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{344ee269-9ac4-4463-ae45-d2dedd4c5943}</destination>
+		</relationship>
+	</object>
+</objects>

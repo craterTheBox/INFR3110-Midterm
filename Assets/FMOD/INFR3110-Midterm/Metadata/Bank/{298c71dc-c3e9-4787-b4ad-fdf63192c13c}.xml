@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="Bank" id="{298c71dc-c3e9-4787-b4ad-fdf63192c13c}">
+		<property name="name">
+			<value>Checkpoints</value>
+		</property>
+		<relationship name="folder">
+			<destination>{61dd100d-7fc4-40b0-b0c5-f9813988b075}</destination>
+		</relationship>
+	</object>
+</objects>
