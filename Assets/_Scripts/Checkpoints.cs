@@ -1,26 +1,23 @@
 ﻿using FMOD;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.VersionControl;
 using UnityEngine;
-
-//#include "PluginMngr.cs"
 
 public class Checkpoints : MonoBehaviour
 {
 
-    public Transform checkpoint;
+    //public Transform checkpoint;
     GameObject player;
 
+    PluginMngr DLL;
+
+    public CheckpointManager checkmanager;
     
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-    }
-
-    
-    void Update()
-    {
-        
+        //checkmanager.checkpoints.Add(this);
     }
 
     private void OnTriggerEnter(Collider _player)
@@ -28,10 +25,11 @@ public class Checkpoints : MonoBehaviour
         //If the player collides with this, it sets the new checkpoint
         if (_player.gameObject.tag == "Player")
         {
-            UnityEngine.Debug.Log("PLAYER COLLIDED WITH KILL ZONE");
-            
-            player.transform.position = checkpoint.position + Vector3.up * 5.0f;
-            player.transform.rotation = checkpoint.rotation;
+            GetComponent<FMODUnity.StudioEventEmitter>().Play();
+
+            //UnityEngine.Debug.Log("PLAYER COLLIDED WITH A CHECKPOINT AT" + checkmanager.lastCheckpoint.position);
+
+            checkmanager.lastCheckpoint = transform;
         }
     }
 }

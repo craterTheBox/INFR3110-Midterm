@@ -17,6 +17,8 @@ public class PlayerMove : MonoBehaviour
     bool isJumping;
     float movementSpeed;
 
+    public CheckpointManager checkmanager;
+
     void Awake()
     {
         charController = GetComponent<CharacterController>();
@@ -26,6 +28,8 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         PlayerMovement();
+
+        ResetToCheckpoint();
     }
 
     void PlayerMovement()
@@ -88,6 +92,7 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {
             isJumping = true;
+            
             StartCoroutine(JumpEvent());
         }
     }
@@ -107,5 +112,20 @@ public class PlayerMove : MonoBehaviour
         charController.slopeLimit = 45.0f;
         isJumping = false;
 
+    }
+
+    void ResetToCheckpoint()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            UnityEngine.Debug.Log("R WAS PRESSED");
+
+            //Literally all of these have problems with it snapping to the checkpoint for a sec then back to where it was, but only sometimes. Fucking hell
+            transform.position = checkmanager.checkpoints[0].transform.position;
+            //gameObject.transform.SetPositionAndRotation(checkmanager.lastCheckpoint.position, checkmanager.lastCheckpoint.rotation);
+            //transform.position = checkmanager.lastCheckpoint.position;
+            //transform.rotation = checkmanager.lastCheckpoint.rotation;
+            UnityEngine.Debug.Log("Player Coords: " + transform.position);
+        }
     }
 }
