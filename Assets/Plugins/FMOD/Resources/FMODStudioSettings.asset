@@ -80,6 +80,7 @@ MonoBehaviour:
   - Master
   Banks:
   - Checkpoints
+  - Music
   - PlayerNoises
   - Test 2D
   - UI

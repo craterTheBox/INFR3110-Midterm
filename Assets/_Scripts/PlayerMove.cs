@@ -18,6 +18,7 @@ public class PlayerMove : MonoBehaviour
     float movementSpeed;
 
     public CheckpointManager checkmanager;
+    SceneSwitcher switcher;
 
     void Awake()
     {
@@ -72,31 +73,17 @@ public class PlayerMove : MonoBehaviour
         JumpInput();
     }
 
-    bool OnSlope()
-    {
-        RaycastHit hit;
-
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, charController.height / 2 * slopeForceRayLength))
-        {
-            if (hit.normal != Vector3.up)
-            {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
     void JumpInput()
     {
         if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {
             isJumping = true;
-            
+            GetComponent<FMODUnity.StudioEventEmitter>().Play();
             StartCoroutine(JumpEvent());
         }
     }
 
+    
     IEnumerator JumpEvent()
     {
         charController.slopeLimit = 90.0f;
@@ -113,19 +100,34 @@ public class PlayerMove : MonoBehaviour
         isJumping = false;
 
     }
+    
+
+    private void OnTriggerStay(Collider other)
+    {
+        UnityEngine.Debug.Log("Colliding with " + other.gameObject.name);
+        if (other.gameObject.tag == "Kill")
+            checkmanager.Respawn();
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.tag == "Kill")
+            checkmanager.Respawn();
+    }
 
     void ResetToCheckpoint()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            UnityEngine.Debug.Log("R WAS PRESSED");
+            checkmanager.Respawn();
+        }
+    }
 
-            //Literally all of these have problems with it snapping to the checkpoint for a sec then back to where it was, but only sometimes. Fucking hell
-            transform.position = checkmanager.checkpoints[0].transform.position;
-            //gameObject.transform.SetPositionAndRotation(checkmanager.lastCheckpoint.position, checkmanager.lastCheckpoint.rotation);
-            //transform.position = checkmanager.lastCheckpoint.position;
-            //transform.rotation = checkmanager.lastCheckpoint.rotation;
-            UnityEngine.Debug.Log("Player Coords: " + transform.position);
+    void BackToMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            switcher.SceneLoad("Start Scene");
         }
     }
 }

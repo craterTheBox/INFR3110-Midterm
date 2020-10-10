@@ -53,6 +53,10 @@ public class PluginMngr : MonoBehaviour
         }
     }
 
+    public int GetGetNumCheckpoints() //Needed for the end screen
+    {
+        return GetNumCheckpoints();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -63,7 +67,7 @@ public class PluginMngr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
+        //*
         //Testing Functions
         if (Input.GetKeyDown(KeyCode.Return))
         {
@@ -85,12 +89,20 @@ public class PluginMngr : MonoBehaviour
             UnityEngine.Debug.Log(_LoadTotalTime());
         }
         //End of Testing Functions (spoilers: they work)*/
-
-
-
     }
 
-    void OnDestroy()
+    public void CheckpointReached()
+    {
+        float currentTime = Time.time;
+        float checkpointTime = currentTime - lastTime;
+        lastTime = currentTime;
+
+        _SaveCheckpointTime(checkpointTime);
+        Debug.Log(_LoadTime(0));
+        Debug.Log(_LoadTime(1));
+    }
+
+    private void OnApplicationQuit()
     {
         _ResetLogger();
     }

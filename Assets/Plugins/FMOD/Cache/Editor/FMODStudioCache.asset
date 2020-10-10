@@ -1,5 +1,41 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8964360303849496544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/INFR3110-Midterm/Build/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637378725061261485
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-8724257773042696373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/INFR3110-Midterm/Build/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637378730698297191
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-7592018306014675963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17,7 +53,25 @@ MonoBehaviour:
   lastModified: 637377205817702579
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
+--- !u!114 &-7015771922301352618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/INFR3110-Midterm/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637378725058964291
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-6984090617925804299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33,7 +87,7 @@ MonoBehaviour:
   Path: event:/JumpSound
   guid: d9058a850b3ef24ab6aa17a12216a3b3
   Banks:
-  - {fileID: -4491894550111499379}
+  - {fileID: -5917764650279805581}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -41,6 +95,60 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 313
+--- !u!114 &-6519038233454763891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/PlayerNoises.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/INFR3110-Midterm/Build/Desktop/PlayerNoises.bank
+  SubDir: 
+  lastModified: 637378725060095166
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-6377860337828119291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/INFR3110-Midterm/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637377205817702579
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-5917764650279805581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/PlayerNoises.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/INFR3110-Midterm/Build/Desktop/PlayerNoises.bank
+  SubDir: 
+  lastModified: 637378730696995520
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-4827960772823762905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,7 +164,7 @@ MonoBehaviour:
   Path: event:/UI Click
   guid: 5ff9e25943eab9439fc45a752f25fea9
   Banks:
-  - {fileID: 2438098248077858190}
+  - {fileID: -8724257773042696373}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -79,7 +187,7 @@ MonoBehaviour:
   Path: event:/Checkpoint
   guid: 51063bd4d2c5f24eb3b28a8d9f4a7cf6
   Banks:
-  - {fileID: 7449437725751963141}
+  - {fileID: 3858605023711797015}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -104,7 +212,25 @@ MonoBehaviour:
   lastModified: 637377205819721008
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
+--- !u!114 &-3511478980002757073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Checkpoints.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/INFR3110-Midterm/Build/Desktop/Checkpoints.bank
+  SubDir: 
+  lastModified: 637378725058726281
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-3165878544373558468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,7 +246,7 @@ MonoBehaviour:
   Path: event:/Test 2D
   guid: 62624c5594f5fc4392e5fa22d89b60c6
   Banks:
-  - {fileID: 9097517398359689961}
+  - {fileID: -1112198621966581570}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -128,6 +254,65 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 6989
+--- !u!114 &-1117563468304997539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Test 2D.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/INFR3110-Midterm/Build/Desktop/Test 2D.bank
+  SubDir: 
+  lastModified: 637377205818535578
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-1112198621966581570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Test 2D.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/INFR3110-Midterm/Build/Desktop/Test 2D.bank
+  SubDir: 
+  lastModified: 637378730697704766
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-138309069264193226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  guid: 49aff79f154b634e8a64a0a5d5636e8a
+  Banks:
+  - {fileID: 2207521048708302044}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 80065
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,24 +327,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 5627041248879863552}
-  - {fileID: 7449437725751963141}
-  - {fileID: -7592018306014675963}
-  - {fileID: -4491894550111499379}
-  - {fileID: 9097517398359689961}
-  - {fileID: 2438098248077858190}
+  - {fileID: 3858605023711797015}
+  - {fileID: 7172616723696755158}
+  - {fileID: 2207521048708302044}
+  - {fileID: -5917764650279805581}
+  - {fileID: -1112198621966581570}
+  - {fileID: -8724257773042696373}
   EditorEvents:
   - {fileID: -3165878544373558468}
   - {fileID: -4510112248664185265}
   - {fileID: 4803349732542231654}
   - {fileID: -6984090617925804299}
   - {fileID: -4827960772823762905}
+  - {fileID: -138309069264193226}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -7592018306014675963}
+  - {fileID: 7172616723696755158}
   StringsBanks:
   - {fileID: 5627041248879863552}
-  stringsBankWriteTime: 637377205817781649
+  stringsBankWriteTime: 637378730695904287
   cacheVersion: 3
+--- !u!114 &2207521048708302044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/INFR3110-Midterm/Build/Desktop/Music.bank
+  SubDir: 
+  lastModified: 637378730696211808
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &2406238222177322361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/INFR3110-Midterm/Build/Desktop/Music.bank
+  SubDir: 
+  lastModified: 637378725082727523
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &2438098248077858190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +400,7 @@ MonoBehaviour:
   lastModified: 637377205820172376
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &3584428116941032564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +419,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &3858605023711797015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Checkpoints.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/INFR3110-Midterm/Build/Desktop/Checkpoints.bank
+  SubDir: 
+  lastModified: 637378730695755485
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &4588797396028206944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,7 +470,7 @@ MonoBehaviour:
   Path: event:/DeathSound
   guid: 729f662d4ddbc6458a9440eaabfed9bc
   Banks:
-  - {fileID: -4491894550111499379}
+  - {fileID: -5917764650279805581}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -251,11 +492,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/INFR3110-Midterm/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637377205817781649
+  lastModified: 637378730695904287
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1074
+    Value: 1156
+  Exists: 1
+--- !u!114 &6134754946482657197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/INFR3110-Midterm/Build/Desktop/UI.bank
+  SubDir: 
+  lastModified: 637377362714078697
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &6523772287723544998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Checkpoints.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/INFR3110-Midterm/Build/Desktop/Checkpoints.bank
+  SubDir: 
+  lastModified: 637377362714048941
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &7172616723696755158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/INFR3110-Midterm/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637378730695879495
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
 --- !u!114 &7449437725751963141
 MonoBehaviour:
@@ -274,7 +569,43 @@ MonoBehaviour:
   lastModified: 637377205820722945
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
+--- !u!114 &8664723481296225242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Test 2D.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/INFR3110-Midterm/Build/Desktop/Test 2D.bank
+  SubDir: 
+  lastModified: 637378725060611002
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &8773623777088920349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/PlayerNoises.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/INFR3110-Midterm/Build/Desktop/PlayerNoises.bank
+  SubDir: 
+  lastModified: 637377362714073746
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &9097517398359689961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,4 +623,4 @@ MonoBehaviour:
   lastModified: 637377205818535578
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0

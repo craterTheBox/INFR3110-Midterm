@@ -6,19 +6,18 @@ public class CheckpointManager : MonoBehaviour
 {
     
     public List<Checkpoints> checkpoints = new List<Checkpoints>();
-    
+    public GameObject player;
     public Transform lastCheckpoint;
     
-
-    // Start is called before the first frame update
     void Start()
     {
         lastCheckpoint = checkpoints[0].transform;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Respawn()
     {
-        
+        Debug.Log("Respawn Called");
+        player.transform.position = lastCheckpoint.transform.position;
+        player.transform.rotation = lastCheckpoint.transform.rotation;
     }
 }
