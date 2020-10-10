@@ -67,7 +67,7 @@ public class PluginMngr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //*
+        /*
         //Testing Functions
         if (Input.GetKeyDown(KeyCode.Return))
         {

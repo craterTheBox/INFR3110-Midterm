@@ -31,6 +31,8 @@ public class PlayerMove : MonoBehaviour
         PlayerMovement();
 
         ResetToCheckpoint();
+
+        BackToMenu();
     }
 
     void PlayerMovement()

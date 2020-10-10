@@ -11,12 +11,6 @@ public class EndTransition : MonoBehaviour
 
     public Text prompt;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     private void OnTriggerStay(Collider _player)
     {
         if (_player.gameObject.tag == "Player")
